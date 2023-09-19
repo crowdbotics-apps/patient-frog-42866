@@ -14,6 +14,9 @@ function api_v1_login_create(payload) {
 function api_v1_signup_create(payload) {
   return patientfrogAPI.post(`/api/v1/signup/`, payload.data)
 }
+function modules_contact_us_contact_us_create(payload) {
+  return patientfrogAPI.post(`/modules/contact-us/contact_us/`)
+}
 function rest_auth_login_create(payload) {
   return patientfrogAPI.post(`/rest-auth/login/`, payload.data)
 }
@@ -54,6 +57,7 @@ export const apiService = {
   api_docs_schema_retrieve,
   api_v1_login_create,
   api_v1_signup_create,
+  modules_contact_us_contact_us_create,
   rest_auth_login_create,
   rest_auth_logout_retrieve,
   rest_auth_logout_create,
